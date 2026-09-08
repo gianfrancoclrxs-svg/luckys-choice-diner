@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky's Choice Diner &mdash; K3B</title>
+<meta name="description" content="Biryani, Hungarian hotdogs, ice cream scoops, and lemonade &mdash; Lucky's Choice Diner by K3B.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaushan+Script&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">
+      <img src="assets/logo.png" alt="Lucky's Choice Diner" class="nav__logo-img">
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#menu">Our Menu</a>
+      <a href="#about">About Us</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact Us</a>
+      <a href="https://maps.app.goo.gl/SwxEpqVvWKLzhZw69" class="nav__cta" target="_blank" rel="noopener">Find a Branch</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero__checker hero__checker--top" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <h1 class="hero__logo-wrap"><img src="assets/logo.png" alt="Lucky's Choice Diner" class="hero__logo"></h1>
+      <p class="hero__tagline">Biryani, Hungarian hotdogs, ice cream scoops, and lemonade.</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">See the Menu</a>
+        <a href="https://maps.app.goo.gl/SwxEpqVvWKLzhZw69" class="btn btn--ghost" target="_blank" rel="noopener">Find a Branch</a>
+      </div>
+    </div>
+
+    <div class="hero__checker hero__checker--bottom" aria-hidden="true"></div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="section__head">
+      <p class="section__eyebrow">Our Menu</p>
+      <h2 class="section__title">Your Choice is Lucky</h2>
+      <p class="section__lede">Everything on the menu, straight from the counter - filter by category or scroll through it all.</p>
+    </div>
+
+    <div class="menu__filters" id="menuFilters" role="tablist" aria-label="Filter menu by category">
+      <button class="menu__filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="menu__filter" data-filter="hungarian" role="tab" aria-selected="false">Hungarian</button>
+      <button class="menu__filter" data-filter="hungarian-bowl" role="tab" aria-selected="false">Hungarian Bowl</button>
+      <button class="menu__filter" data-filter="side-order" role="tab" aria-selected="false">Side Order</button>
+      <button class="menu__filter" data-filter="biryani" role="tab" aria-selected="false">Biryani Meal</button>
+      <button class="menu__filter" data-filter="ala-carte" role="tab" aria-selected="false">Ala Carte</button>
+      <button class="menu__filter" data-filter="vegetables" role="tab" aria-selected="false">Vegetables</button>
+      <button class="menu__filter" data-filter="group-meal" role="tab" aria-selected="false">Group Meal</button>
+      <button class="menu__filter" data-filter="rice" role="tab" aria-selected="false">Rice</button>
+      <button class="menu__filter" data-filter="pasta" role="tab" aria-selected="false">Pasta</button>
+      <button class="menu__filter" data-filter="noodles" role="tab" aria-selected="false">Noodles</button>
+      <button class="menu__filter" data-filter="beverages" role="tab" aria-selected="false">Beverages</button>
+      <button class="menu__filter" data-filter="coffee" role="tab" aria-selected="false">Coffee</button>
+      <button class="menu__filter" data-filter="dessert" role="tab" aria-selected="false">Dessert</button>
+    </div>
+
+    <div class="menu__categories" id="menuCategories">
+
+      <div class="menu__category" data-category="hungarian">
+        <h3 class="menu__category-title">Hungarian</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian w/ Rice</span><span class="menu__item-desc">Grilled hotdog, side of rice</span></div><span class="menu__item-price">&#8369;108</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Sandwich Volcano</span><span class="menu__item-desc">Loaded sandwich, spicy finish</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Burrito w/ Java Rice</span><span class="menu__item-desc">Wrapped hotdog with java rice</span></div><span class="menu__item-price">&#8369;138</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Burrito w/ Plain Rice</span><span class="menu__item-desc">Wrapped hotdog with plain rice</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian w/ Nuggets</span><span class="menu__item-desc">Hotdog paired with chicken nuggets</span></div><span class="menu__item-price">&#8369;108</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Sandwich w/ Fries</span><span class="menu__item-desc">Sandwich with a side of fries</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Sandwich w/ Fries &amp; Nachos</span><span class="menu__item-desc">Sandwich, fries, and nachos combo</span></div><span class="menu__item-price">&#8369;148</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Sandwich Hawaiian</span><span class="menu__item-desc">Sandwich with a sweet Hawaiian twist</span></div><span class="menu__item-price">&#8369;128</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="hungarian-bowl">
+        <h3 class="menu__category-title">Hungarian Bowl</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Rice Bowl</span><span class="menu__item-desc">Hotdog over a bowl of rice</span></div><span class="menu__item-price">&#8369;78</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Cheese Potato Bowl w/ Hungarian</span><span class="menu__item-desc">Cheesy potatoes topped with hotdog</span></div><span class="menu__item-price">&#8369;98</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Rice Bowl w/ Egg</span><span class="menu__item-desc">Rice bowl topped with fried egg</span></div><span class="menu__item-price">&#8369;88</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Hungarian Rice Bowl w/ Nuggets</span><span class="menu__item-desc">Rice bowl with chicken nuggets</span></div><span class="menu__item-price">&#8369;98</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="side-order">
+        <h3 class="menu__category-title">Side Order</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">French Fries</span><span class="menu__item-desc">Crispy classic fries</span></div><span class="menu__item-price">&#8369;78</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Nuggets</span><span class="menu__item-desc">Golden fried chicken nuggets</span></div><span class="menu__item-price">&#8369;88</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Pancakes</span><span class="menu__item-desc">Fluffy stack, syrup on the side</span></div><span class="menu__item-price">&#8369;118</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="biryani">
+        <h3 class="menu__category-title">Biryani Meal</h3>
+        <p class="menu__category-note">Every combo comes with unlimited beef soup.</p>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B1</span><span class="menu__item-name">Chicken &amp; Egg w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;198</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B2</span><span class="menu__item-name">Boneless Bangus &amp; Egg w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;198</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B3</span><span class="menu__item-name">Chicken Shanghai &amp; Egg w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;198</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B4</span><span class="menu__item-name">Beef Tapa &amp; Egg w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;198</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B5</span><span class="menu__item-name">Chicken &amp; Chicken Shanghai w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B6</span><span class="menu__item-name">Beef Tapa &amp; Chicken Shanghai w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B7</span><span class="menu__item-name">Boneless Bangus &amp; Chicken Shanghai w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B8</span><span class="menu__item-name">Beef Tapa &amp; Chicken w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B9</span><span class="menu__item-name">Beef Tapa &amp; Boneless Bangus w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B10</span><span class="menu__item-name">Chicken &amp; Boneless Bangus w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B11</span><span class="menu__item-name">Chicken BBQ &amp; Chicken w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B12</span><span class="menu__item-name">Chicken BBQ &amp; Egg w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B13</span><span class="menu__item-name">Chicken BBQ &amp; Beef Tapa w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B14</span><span class="menu__item-name">Chicken BBQ &amp; Boneless Bangus w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">B15</span><span class="menu__item-name">Chicken BBQ &amp; Chicken Shanghai w/ Biryani Rice</span></div><span class="menu__item-price">&#8369;208</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="ala-carte">
+        <h3 class="menu__category-title">Ala Carte</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Chicken Tenders</span><span class="menu__item-desc">Breaded chicken strips</span></div><span class="menu__item-price">&#8369;198</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Tinadyakang Manok</span><span class="menu__item-desc">Native-style stewed chicken</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Chicken BBQ (5pcs)</span><span class="menu__item-desc">Five skewers of grilled chicken BBQ</span></div><span class="menu__item-price">&#8369;198</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Fried Chicken Whole</span><span class="menu__item-desc">Whole crispy fried chicken to share</span></div><span class="menu__item-price">&#8369;428</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Fried Chicken Half</span><span class="menu__item-desc">Half order of crispy fried chicken</span></div><span class="menu__item-price">&#8369;258</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Goto-Bulalo</span><span class="menu__item-desc">Rice porridge with bone marrow beef</span></div><span class="menu__item-price">&#8369;358</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Pata-Bulalo</span><span class="menu__item-desc">Pork leg simmered in bulalo broth</span></div><span class="menu__item-price">&#8369;358</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Beef w/ Mushroom</span><span class="menu__item-desc">Sauteed beef strips with mushroom</span></div><span class="menu__item-price">&#8369;158</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Choice Pares</span><span class="menu__item-desc">Braised beef in sweet pares sauce</span></div><span class="menu__item-price">&#8369;138</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Beef Salpicao</span><span class="menu__item-desc">Garlic butter beef cubes</span></div><span class="menu__item-price">&#8369;388</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Shrimp Tempura</span><span class="menu__item-desc">Battered, deep-fried shrimp</span></div><span class="menu__item-price">&#8369;438</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Sinigang sa Miso (Salmon Head)</span><span class="menu__item-desc">Sour miso broth with salmon head</span></div><span class="menu__item-price">&#8369;298</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Shanghai (10pcs)</span><span class="menu__item-desc">Ten pieces of fried spring rolls</span></div><span class="menu__item-price">&#8369;208</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Creamy Tofu</span><span class="menu__item-desc">Tofu in a creamy savory sauce</span></div><span class="menu__item-price">&#8369;158</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="vegetables">
+        <h3 class="menu__category-title">Vegetables</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Eggplant Omelette</span><span class="menu__item-desc">Grilled eggplant dipped in egg, pan-fried</span></div><span class="menu__item-price">&#8369;158</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Stir-Fry Veggies</span><span class="menu__item-desc">Mixed vegetables, quickly stir-fried</span></div><span class="menu__item-price">&#8369;138</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Steamy Garlic Broccoli</span><span class="menu__item-desc">Broccoli steamed with garlic</span></div><span class="menu__item-price">&#8369;148</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Pinoy Tortang Talong</span><span class="menu__item-desc">The classic homestyle eggplant omelette</span></div><span class="menu__item-price">&#8369;128</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="group-meal">
+        <h3 class="menu__category-title">Group Meal</h3>
+
+        <p class="menu__subhead">Biryani Group Meal (Good for 3)</p>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">BMA1</span><span class="menu__item-name">Boneless Bangus, Beef Tapa &amp; 3 Cups of Rice</span></div><span class="menu__item-price">&#8369;548</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">BMA2</span><span class="menu__item-name">Chicken, Chicken Shanghai, &amp; 3 Cups of Rice</span></div><span class="menu__item-price">&#8369;548</span></li>
+        </ul>
+
+        <p class="menu__subhead">Biryani Group Meal (Good for 4)</p>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">BMB1</span><span class="menu__item-name">Chicken, Beef Tapa, Chicken Shanghai, &amp; 4 Cups of Rice</span></div><span class="menu__item-price">&#8369;678</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-code">BMB2</span><span class="menu__item-name">Boneless Bangus, Beef Tapa, Chicken Shanghai, &amp; 4 Cups of Rice</span></div><span class="menu__item-price">&#8369;678</span></li>
+        </ul>
+
+        <p class="menu__subhead">Deep Fried Chicken Fiesta Meal</p>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Partner Fiesta</span><span class="menu__item-desc">Fried chicken meal built for two</span></div><span class="menu__item-price">&#8369;338</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Barkada Fiesta</span><span class="menu__item-desc">Fried chicken meal built for the barkada</span></div><span class="menu__item-price">&#8369;608</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="rice">
+        <h3 class="menu__category-title">Rice</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Plain Rice</span><span class="menu__item-desc">Steamed white rice</span></div><span class="menu__item-price">&#8369;48</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Biryani Rice</span><span class="menu__item-desc">Fragrant spiced biryani rice</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Java Rice</span><span class="menu__item-desc">Turmeric garlic fried rice</span></div><span class="menu__item-price">&#8369;68</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Adobo Sinangag</span><span class="menu__item-desc">Garlic fried rice with adobo flakes</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Garlic Sinangag</span><span class="menu__item-desc">Classic garlic fried rice</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Tinapa Sinangag</span><span class="menu__item-desc">Garlic fried rice with smoked fish flakes</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Binagoongan Sinangag</span><span class="menu__item-desc">Garlic fried rice with shrimp paste</span></div><span class="menu__item-price">&#8369;128</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Spicy Sinangag</span><span class="menu__item-desc">Garlic fried rice with a chili kick</span></div><span class="menu__item-price">&#8369;128</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="pasta">
+        <h3 class="menu__category-title">Pasta (Sharing)</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Pancit Bihon Guisado</span><span class="menu__item-desc">Stir-fried rice noodles, mixed veggies</span></div><span class="menu__item-price">&#8369;158</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Pancit Canton Guisado</span><span class="menu__item-desc">Stir-fried egg noodles, mixed veggies</span></div><span class="menu__item-price">&#8369;158</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Pancit Cabi Guisado</span><span class="menu__item-desc">House-style stir-fried noodles</span></div><span class="menu__item-price">&#8369;168</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Chicken Pesto Pasta</span><span class="menu__item-desc">Pasta tossed in pesto with chicken</span></div><span class="menu__item-price">&#8369;168</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Chicken Carbonara</span><span class="menu__item-desc">Creamy carbonara with chicken</span></div><span class="menu__item-price">&#8369;168</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="noodles">
+        <h3 class="menu__category-title">Noodles</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Chicken Lomi</span><span class="menu__item-desc">Thick noodle soup with chicken</span></div><span class="menu__item-price">&#8369;138</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Beef Lomi</span><span class="menu__item-desc">Thick noodle soup with beef</span></div><span class="menu__item-price">&#8369;138</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lomi Overload</span><span class="menu__item-desc">Lomi loaded with extra toppings</span></div><span class="menu__item-price">&#8369;158</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Chicken Mami</span><span class="menu__item-desc">Chicken noodle soup</span></div><span class="menu__item-price">&#8369;138</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Beef Mami</span><span class="menu__item-desc">Beef noodle soup</span></div><span class="menu__item-price">&#8369;138</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Egg Mami</span><span class="menu__item-desc">Noodle soup topped with egg</span></div><span class="menu__item-price">&#8369;118</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="beverages">
+        <h3 class="menu__category-title">Beverages</h3>
+        <ul class="menu__list">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lemonade</span><span class="menu__item-desc">Fresh-squeezed, never too sweet</span></div><span class="menu__item-price">&#8369;58</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lemonade Cucumber</span><span class="menu__item-desc">Lemonade with a cucumber twist</span></div><span class="menu__item-price">&#8369;68</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lemonade Yakult</span><span class="menu__item-desc">Lemonade blended with yakult</span></div><span class="menu__item-price">&#8369;68</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Shake Mango Graham</span><span class="menu__item-desc">Mango shake with graham crumbs</span></div><span class="menu__item-price">&#8369;68</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Shake Fruit Salad</span><span class="menu__item-desc">Fruit salad blended into a shake</span></div><span class="menu__item-price">&#8369;68</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Sago't Gulaman (Solo)</span><span class="menu__item-desc">Sweet gulaman with sago pearls</span></div><span class="menu__item-price">&#8369;38</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Sago't Gulaman (Pitcher)</span><span class="menu__item-desc">Sweet gulaman with sago pearls, for the table</span></div><span class="menu__item-price">&#8369;148</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Iced Tea (Solo)</span></div><span class="menu__item-price">&#8369;38</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Iced Tea (Pitcher)</span></div><span class="menu__item-price">&#8369;148</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Soda</span></div><span class="menu__item-price">&#8369;48</span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Bottled Water (500ml)</span></div><span class="menu__item-price">&#8369;38</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="coffee">
+        <h3 class="menu__category-title">Coffee</h3>
+        <p class="menu__category-note">Hot or cold, your call.</p>
+        <ul class="menu__list menu__list--dual">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Caramel Macchiatto</span></div><span class="menu__item-price menu__item-price--dual"><b>&#8369;78</b><small>HOT</small><b>&#8369;68</b><small>COLD</small></span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Spanish Latte</span></div><span class="menu__item-price menu__item-price--dual"><b>&#8369;78</b><small>HOT</small><b>&#8369;68</b><small>COLD</small></span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Americano</span></div><span class="menu__item-price menu__item-price--dual"><b>&#8369;68</b><small>HOT</small><b>&#8369;58</b><small>COLD</small></span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Mocha Latte</span></div><span class="menu__item-price menu__item-price--dual"><b>&#8369;78</b><small>HOT</small><b>&#8369;68</b><small>COLD</small></span></li>
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Dirty Matcha</span></div><span class="menu__item-price menu__item-price--dual"><b>&#8369;78</b><small>HOT</small><b>&#8369;68</b><small>COLD</small></span></li>
+        </ul>
+      </div>
+
+      <div class="menu__category" data-category="dessert">
+        <h3 class="menu__category-title">Dessert</h3>
+        <ul class="menu__list menu__list--dual">
+          <li class="menu__item"><div class="menu__item-info"><span class="menu__item-name">Lucky's Melon Sundae</span><span class="menu__item-desc">Melon and ice cream sundae</span></div><span class="menu__item-price menu__item-price--dual"><b>&#8369;148</b><small>REGULAR</small><b>&#8369;168</b><small>OVERLOAD</small></span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="menu__footnote">A 10% service charge will be added to your total bill.</p>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about__art" aria-hidden="true">
+      <div class="about__frame">
+        <img src="assets/logo.png" alt="" class="about__frame-img">
+      </div>
+    </div>
+    <div class="about__content">
+      <p class="section__eyebrow">About Us</p>
+      <h2 class="section__title">Lucky's Choice Diner</h2>
+      <p>offers comfort food with a playful twist, home of our signature biryani, plus Hungarian hotdogs, ice cream scoops, and refreshing lemonade.</p>
+      <p>A cozy diner spot serving flavors for every craving, all in one place.</p>
+      <p>Come taste your lucky choice!</p>
+    </div>
+  </section>
+
+  <section class="feedback" id="feedback">
+    <div class="section__head">
+      <p class="section__eyebrow">Feedback</p>
+      <h2 class="section__title">Tell us how we did</h2>
+      <p class="section__lede">Good, bad, or "add more lemonade" &mdash; we read every ticket.</p>
+    </div>
+
+    <div class="feedback__layout">
+      <div class="feedback__quotes">
+        <blockquote class="ticket">
+          <p>"The biryani is the same one I used to line up for at the old cart. Glad it didn't change."</p>
+          <cite>&mdash; R*****</cite>
+        </blockquote>
+        <blockquote class="ticket">
+          <p>"Hungarian hotdog and a scoop of ube after, every single time. Never once been disappointed."</p>
+          <cite>&mdash; G*****</cite>
+        </blockquote>
+        <blockquote class="ticket">
+          <p>"Lemonade actually tastes like lemons. Small thing, but it's why I keep coming back."</p>
+          <cite>&mdash; G*** F*****</cite>
+        </blockquote>
+      </div>
+
+      <div class="feedback__form">
+        <h3>Leave your own</h3>
+        <p class="feedback__form-copy">Got a minute? Good, bad, or "add more lemonade", we want to hear it.</p>
+        <a href="https://forms.gle/ftgRmAeX39Ldt1YR9" target="_blank" rel="noopener" class="btn btn--primary">Open Feedback Form</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__info">
+        <p class="section__eyebrow section__eyebrow--light">Contact Us</p>
+
+        <dl class="contact__list">
+          <div>
+            <dt>Address</dt>
+            <dd>Lucky's Choice Diner, 932 JP Rizal St. Poblacion, Makati City</dd>
+          </div>
+          <div>
+            <dt>Hours</dt>
+            <dd>
+              Monday to Thursday, 10:30 AM to 3:30 AM<br>
+              Friday to Sunday, Open 24 hours
+            </dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd>(02) 89201504</dd>
+            <dd>+63 924 262 1330</dd>
+          </div>
+        </dl>
+
+        <div class="contact__socials">
+          <a href="https://www.facebook.com/profile.php?id=61592401465406" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+          <a href="https://maps.app.goo.gl/SwxEpqVvWKLzhZw69" aria-label="Google Maps" target="_blank" rel="noopener">MAP</a>
+        </div>
+      </div>
+
+      <div class="contact__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.528608492731!2d121.03058482895402!3d14.567673386729185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9b306f7ba2f%3A0xf9a5997a1e455faf!2sLucky%E2%80%99s%20Choice%20Diner!5e0!3m2!1sen!2sph!4v1788841859500!5m2!1sen!2sph"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Lucky's Choice Diner location on Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Lucky's Choice Diner. All rights reserved.</p>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top" type="button">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
