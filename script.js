@@ -62,6 +62,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Dish showcase: tap-to-flip on touch devices (no hover to rely on) ---
+  const dishCards = document.querySelectorAll('.dish-card');
+  const noHover = window.matchMedia('(hover: none)').matches;
+
+  if (noHover && dishCards.length) {
+    dishCards.forEach((card) => {
+      card.addEventListener('click', (e) => {
+        if (!card.classList.contains('is-flipped')) {
+          e.preventDefault();
+          dishCards.forEach((c) => { if (c !== card) c.classList.remove('is-flipped'); });
+          card.classList.add('is-flipped');
+        }
+        // already flipped: let the tap through and follow the link to #menu
+      });
+    });
+
+    // Tapping anywhere outside the showcase un-flips the open card
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dish-card')) {
+        dishCards.forEach((c) => c.classList.remove('is-flipped'));
+      }
+    });
+  }
+
   // --- Footer year ---
   document.getElementById('year').textContent = new Date().getFullYear();
 
