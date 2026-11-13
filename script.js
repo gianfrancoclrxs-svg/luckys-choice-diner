@@ -86,6 +86,78 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Promos carousel ---
+  const promoTrack = document.getElementById('promoTrack');
+  if (promoTrack) {
+    const promoCards = [...promoTrack.children];
+    const promoDots = document.getElementById('promoDots');
+    let promoIndex = 0;
+    let promoPaused = false;
+    let promoVisible = true;
+
+    const cardLeft = (n) => promoCards[n].offsetLeft - promoCards[0].offsetLeft;
+
+    const setActive = (i) => {
+      promoIndex = i;
+      [...promoDots.children].forEach((d, n) => d.classList.toggle('is-active', n === i));
+    };
+
+    const goToPromo = (i) => {
+      const n = (i + promoCards.length) % promoCards.length;
+      promoTrack.scrollTo({ left: cardLeft(n), behavior: 'smooth' });
+      setActive(n);
+    };
+
+    promoCards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'promos__dot';
+      dot.setAttribute('aria-label', 'Go to deal ' + (i + 1));
+      dot.addEventListener('click', () => goToPromo(i));
+      promoDots.appendChild(dot);
+    });
+
+    promoTrack.addEventListener('scroll', () => {
+      let nearest = 0, best = Infinity;
+      promoCards.forEach((_, n) => {
+        const d = Math.abs(cardLeft(n) - promoTrack.scrollLeft);
+        if (d < best) { best = d; nearest = n; }
+      });
+      if (nearest !== promoIndex) setActive(nearest);
+    }, { passive: true });
+
+    document.getElementById('promoPrev').addEventListener('click', () => goToPromo(promoIndex - 1));
+    document.getElementById('promoNext').addEventListener('click', () => goToPromo(promoIndex + 1));
+
+    ['mouseenter', 'focusin', 'touchstart'].forEach((ev) =>
+      promoTrack.addEventListener(ev, () => { promoPaused = true; }, { passive: true }));
+    ['mouseleave', 'focusout'].forEach((ev) =>
+      promoTrack.addEventListener(ev, () => { promoPaused = false; }, { passive: true }));
+    // After a touch, resume autoplay only after a pause so it doesn't fight the swipe
+    promoTrack.addEventListener('touchend', () => {
+      setTimeout(() => { promoPaused = false; }, 6000);
+    }, { passive: true });
+
+    // Only autoplay while the carousel is on screen
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        promoVisible = entries[0].isIntersecting;
+      }, { threshold: 0.3 }).observe(promoTrack);
+    }
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setInterval(() => {
+        if (!promoPaused && promoVisible) goToPromo(promoIndex + 1);
+      }, 5000);
+    }
+
+    window.addEventListener('resize', () => {
+      promoTrack.scrollLeft = cardLeft(promoIndex);
+    });
+
+    setActive(0);
+  }
+
   // --- Footer year ---
   document.getElementById('year').textContent = new Date().getFullYear();
 

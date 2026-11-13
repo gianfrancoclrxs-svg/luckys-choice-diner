@@ -24,6 +24,7 @@
 
     <nav class="nav__links" id="navLinks">
       <a href="#menu">Our Menu</a>
+      <a href="#promos">Deals</a>
       <a href="#about">About Us</a>
       <a href="#feedback">Feedback</a>
       <a href="#contact">Contact Us</a>
@@ -274,6 +275,89 @@
 
       </div>
     </div>
+  </section>
+
+  <section class="promos" id="promos">
+    <div class="section__head">
+      <p class="section__eyebrow">Deals &amp; Promos</p>
+      <h2 class="section__title">Lucky Deals</h2>
+      <p class="section__lede">Pairs, breakfast, buckets, and happy hour. Swipe through what's on right now.</p>
+    </div>
+
+    <div class="promos__carousel">
+      <button class="promos__arrow promos__arrow--prev" id="promoPrev" type="button" aria-label="Previous deal">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+
+      <div class="promos__track" id="promoTrack" tabindex="0" aria-label="Deals carousel">
+
+        <article class="promo promo--red">
+          <p class="promo__tag">Pick Your Pair</p>
+          <h3 class="promo__title">2 Meals</h3>
+          <p class="promo__price"><span>&#8369;</span>388</p>
+          <p class="promo__copy">Pick any 2 meals. Each comes with a glass of iced tea.</p>
+          <ul class="promo__list">
+            <li>Creamy Carbonara w/ Hungarian</li>
+            <li>Chicken Pesto w/ Chicken Tenders</li>
+            <li>Pancake &amp; Hungarian</li>
+            <li>Hungarian Rice Bowl</li>
+          </ul>
+        </article>
+
+        <article class="promo promo--yellow">
+          <p class="promo__tag">Rise &amp; Shine</p>
+          <h3 class="promo__title">All You Can Eat Breakfast</h3>
+          <p class="promo__time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 6:00 AM - 10:00 AM</p>
+          <p class="promo__price"><span>&#8369;</span>188</p>
+          <p class="promo__copy">Per head. Come hungry, eat all you can.</p>
+        </article>
+
+        <article class="promo promo--black">
+          <p class="promo__tag">Lucky Hour</p>
+          <h3 class="promo__title">Cold Ones, Lucky Prices</h3>
+          <ul class="promo__rows">
+            <li><span>Red Horse (500 mL)</span><b>&#8369;108</b></li>
+            <li><span>San Mig Light (In-can)</span><b>&#8369;88</b></li>
+            <li><span>Smirnoff Mule (330 mL)</span><b>&#8369;78</b></li>
+          </ul>
+        </article>
+
+        <article class="promo promo--cream">
+          <p class="promo__tag">Beer Buckets</p>
+          <h3 class="promo__title">Bucket Up</h3>
+          <div class="promo__bucket">
+            <p class="promo__bucket-name"><span>Smirnoff Bucket</span> <b>&#8369;398</b></p>
+            <p>5 bottles</p>
+            <p class="promo__free">+ free Spicy Chicken Feet (8 pcs)</p>
+          </div>
+          <div class="promo__bucket">
+            <p class="promo__bucket-name"><span>Red Horse Bucket</span> <b>&#8369;328</b></p>
+            <p>3 x 500 ml bottles</p>
+            <p class="promo__free">+ free Spicy Chicken Feet (8 pcs)</p>
+          </div>
+        </article>
+
+        <article class="promo promo--dark">
+          <p class="promo__tag">Bar Menu</p>
+          <h3 class="promo__title">Bar Bites</h3>
+          <ul class="promo__rows promo__rows--desc">
+            <li><span>Spicy Chicken Feet<small>Tender chicken feet in a spicy sauce, 12 pcs per order.</small></span><b>&#8369;158</b></li>
+            <li><span>Sizzling Tofu Sisig<small>Crispy tofu with onions and calamansi, served sizzling hot.</small></span><b>&#8369;198</b></li>
+            <li><span>Sizzling Bangus Sisig<small>Flaked milkfish with onions and calamansi, served sizzling hot.</small></span><b>&#8369;208</b></li>
+            <li><span>Cheesy Beef Dynamite<small>Savory beef giniling and melted cheese in a crispy chili wrap.</small></span><b>&#8369;208</b></li>
+            <li><span>Calamares<small>Crispy fried squid rings, served with dipping sauce.</small></span><b>&#8369;228</b></li>
+          </ul>
+          <p class="promo__note">A 10% service charge will be added to your total bill.</p>
+        </article>
+
+      </div>
+
+      <button class="promos__arrow promos__arrow--next" id="promoNext" type="button" aria-label="Next deal">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="promos__dots" id="promoDots"></div>
   </section>
 
   <section class="menu" id="menu">
